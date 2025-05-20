@@ -137,58 +137,6 @@ export default function Conect() {
             </div>
           </div>
 
-          {/* Tutoriales y recursos */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-[#003366] mb-4">Tutoriales y recursos</h3>
-
-            <div className="space-y-3">
-              <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-                <Link href="#" className="flex items-center text-[#003366] hover:underline">
-                  <span className="mr-3 bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    1
-                  </span>
-                  <span className="font-medium">Primeros pasos en Conect - Guía para nuevos usuarios</span>
-                </Link>
-              </div>
-
-              <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-                <Link href="#" className="flex items-center text-[#003366] hover:underline">
-                  <span className="mr-3 bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    2
-                  </span>
-                  <span className="font-medium">Cómo reinscribirte a un nuevo semestre</span>
-                </Link>
-              </div>
-
-              <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-                <Link href="#" className="flex items-center text-[#003366] hover:underline">
-                  <span className="mr-3 bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    3
-                  </span>
-                  <span className="font-medium">Consulta tu horario de clases</span>
-                </Link>
-              </div>
-
-              <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-                <Link href="#" className="flex items-center text-[#003366] hover:underline">
-                  <span className="mr-3 bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    4
-                  </span>
-                  <span className="font-medium">Cómo ver tus calificaciones</span>
-                </Link>
-              </div>
-
-              <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-                <Link href="#" className="flex items-center text-[#003366] hover:underline">
-                  <span className="mr-3 bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center">
-                    5
-                  </span>
-                  <span className="font-medium">Consulta tu información escolar</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-
           {/* Requisitos técnicos */}
           <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
             <h3 className="text-lg font-semibold text-[#003366] mb-3">Requisitos técnicos</h3>
