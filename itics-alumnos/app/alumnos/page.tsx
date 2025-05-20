@@ -12,7 +12,7 @@ export default function AlumnosPage() {
   return (
     <div className="container mx-auto py-8 px-4">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold">Sección de Alumnos</h1>
+        <h1 className="text-3xl md:text-4xl font-bold">Alumnos</h1>
         <ModeToggle />
       </div>
 
