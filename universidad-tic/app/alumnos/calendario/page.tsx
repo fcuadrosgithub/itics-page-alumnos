@@ -84,9 +84,11 @@ export default function CalendarioEscolar() {
                 <p className="text-gray-600">Descarga el calendario escolar oficial en formato PDF</p>
               </div>
             </div>
-            <button className="bg-[#003366] text-white py-2 px-6 rounded-md hover:bg-[#002244] transition-colors">
-              Descargar PDF
-            </button>
+            <a href="/docs/Calendario.pdf" download className="inline-flex">
+              <button className="bg-[#003366] text-white py-2 px-6 rounded-md hover:bg-[#002244] transition-colors">
+                Descargar PDF
+              </button>
+            </a>
           </div>
 
           {/* Fechas importantes */}
@@ -288,22 +290,17 @@ export default function CalendarioEscolar() {
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/services.html" target="_blank" className="text-sm hover:underline">
                     Oferta Académica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://estudiantes.itsoeh.edu.mx" target="_blank" className="text-sm hover:underline">
                     Servicios Escolares
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/biblioteca/index.html" target="_blank" className="text-sm hover:underline">
                     Biblioteca Digital
                   </Link>
                 </li>

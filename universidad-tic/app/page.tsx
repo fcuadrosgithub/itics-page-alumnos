@@ -56,7 +56,7 @@ export default function Home() {
             <div className="bg-white p-4 rounded shadow-md border border-yellow-200">
               <h4 className="font-bold text-yellow-700 mb-2">Evaluación Docente</h4>
               <p className="text-gray-700 mb-2">Periodo de evaluación: 15 - 30 de Mayo 2025</p>
-              <Link href="#" className="text-blue-600 hover:underline inline-flex items-center">
+              <Link href="http://evaluaciondocente.itsoeh.edu.mx/" target="_blank" className="text-blue-600 hover:underline inline-flex items-center">
                 Realizar evaluación <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </div>
@@ -64,14 +64,14 @@ export default function Home() {
               <h4 className="font-bold text-yellow-700 mb-2">Pagos</h4>
               <p className="text-gray-700 mb-2">Segunda oportunidad: Fecha límite 20 de Mayo 2025</p>
               <p className="text-gray-700 mb-2">Reinscripción: Inicia 1 de Junio 2025</p>
-              <Link href="#" className="text-blue-600 hover:underline inline-flex items-center">
-                Información de pagos <ChevronRight className="h-4 w-4 ml-1" />
+              <Link href="https://estudiantes.itsoeh.edu.mx/" target="_blank" className="text-blue-600 hover:underline inline-flex items-center">
+                Genera tus pagos <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </div>
             <div className="bg-white p-4 rounded shadow-md border border-yellow-200">
               <h4 className="font-bold text-yellow-700 mb-2">Titulación</h4>
               <p className="text-gray-700 mb-2">Entrega de documentos: Hasta 25 de Mayo 2025</p>
-              <Link href="#" className="text-blue-600 hover:underline inline-flex items-center">
+              <Link href="https://www.itsoeh.edu.mx/front/documentos/egresados/REQUISITOS%20PARA%20REGISTRO%20DE%20PRODUCTO%20DE%20TITULACI%C3%93N%20(1).pdf" target="_blank" className="text-blue-600 hover:underline inline-flex items-center">
                 Proceso de titulación <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </div>
@@ -164,23 +164,19 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
               <ul className="space-y-2">
+                
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/services.html" target="_blank" className="text-sm hover:underline">
                     Oferta Académica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://estudiantes.itsoeh.edu.mx" target="_blank" className="text-sm hover:underline">
                     Servicios Escolares
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/biblioteca/index.html" target="_blank" className="text-sm hover:underline">
                     Biblioteca Digital
                   </Link>
                 </li>

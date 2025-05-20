@@ -144,23 +144,19 @@ export default function PerfilEgreso() {
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
               <ul className="space-y-2">
+                
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/services.html" target="_blank" className="text-sm hover:underline">
                     Oferta Académica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://estudiantes.itsoeh.edu.mx" target="_blank" className="text-sm hover:underline">
                     Servicios Escolares
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/biblioteca/index.html" target="_blank" className="text-sm hover:underline">
                     Biblioteca Digital
                   </Link>
                 </li>

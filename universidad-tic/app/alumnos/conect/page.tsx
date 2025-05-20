@@ -70,9 +70,11 @@ export default function Conect() {
                 <p className="opacity-90 mb-4">
                   Ingresa a la plataforma con tu matrícula y contraseña para acceder a tu información educativa.
                 </p>
-                <button className="bg-white text-[#003366] py-2 px-6 rounded-md hover:bg-gray-100 transition-colors inline-flex items-center">
-                  <LogIn className="h-5 w-5 mr-2" /> Iniciar sesión
-                </button>
+                <a href="http://conect.itsoeh.edu.mx/mix_21_alu/" target="_blank" className="inline-flex">
+                  <button className="bg-white text-[#003366] py-2 px-6 rounded-md hover:bg-gray-100 transition-colors">
+                    <LogIn className="h-5 w-5 mr-2" /> Iniciar sesión
+                  </button>
+                </a>
               </div>
               <div className="bg-white/10 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2">¿Olvidaste tu contraseña?</h4>
@@ -227,23 +229,19 @@ export default function Conect() {
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
               <ul className="space-y-2">
+                
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/services.html" target="_blank" className="text-sm hover:underline">
                     Oferta Académica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://estudiantes.itsoeh.edu.mx" target="_blank" className="text-sm hover:underline">
                     Servicios Escolares
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/biblioteca/index.html" target="_blank" className="text-sm hover:underline">
                     Biblioteca Digital
                   </Link>
                 </li>

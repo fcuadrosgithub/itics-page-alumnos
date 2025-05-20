@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, BookA } from "lucide-react"
 
 export default function PlanEstudios() {
   return (
@@ -64,6 +64,22 @@ export default function PlanEstudios() {
               El programa tiene una duración de 9 semestres (4 años y medio) y está estructurado en áreas de conocimiento
               que permiten una especialización progresiva.
             </p>
+          </div>
+
+          {/* Retícula descargable */}
+          <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200 flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center mb-4 md:mb-0">
+              <BookA className="h-12 w-12 text-[#003366] mr-4" />
+              <div>
+                <h4 className="font-bold text-lg text-[#003366]">Retícula Académica</h4>
+                <p className="text-gray-600">Descarga la retícula académica oficial en formato PDF</p>
+              </div>
+            </div>
+            <a href="/docs/Reticula.pdf" download className="inline-flex">
+              <button className="bg-[#003366] text-white py-2 px-6 rounded-md hover:bg-[#002244] transition-colors">
+                Descargar PDF
+              </button>
+            </a>
           </div>
 
           <div className="space-y-8">
@@ -211,23 +227,19 @@ export default function PlanEstudios() {
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
               <ul className="space-y-2">
+                
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/services.html" target="_blank" className="text-sm hover:underline">
                     Oferta Académica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://estudiantes.itsoeh.edu.mx" target="_blank" className="text-sm hover:underline">
                     Servicios Escolares
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm hover:underline">
+                  <Link href="https://www.itsoeh.edu.mx/front/biblioteca/index.html" target="_blank" className="text-sm hover:underline">
                     Biblioteca Digital
                   </Link>
                 </li>
