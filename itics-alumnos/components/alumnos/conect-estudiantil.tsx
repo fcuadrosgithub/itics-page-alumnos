@@ -5,9 +5,9 @@ export default function ConectEstudiantil() {
   const accesosRapidos = [
     {
       titulo: "Plataforma Institucional",
-      descripcion: "Accede a tu plataforma de aprendizaje en línea",
+      descripcion: "Accede a tu plataforma",
       icono: <BookOpen className="h-8 w-8" />,
-      url: "https://plataforma.institucion.edu",
+      url: "https://www.itsoeh.edu.mx/front/",
       color: "bg-blue-100 dark:bg-blue-900/20",
       textColor: "text-blue-600 dark:text-blue-400",
     },
@@ -21,9 +21,9 @@ export default function ConectEstudiantil() {
     },
     {
       titulo: "Servicios Escolares",
-      descripcion: "Consulta calificaciones, horarios y más",
+      descripcion: "Realiza pagos de materias",
       icono: <FileText className="h-8 w-8" />,
-      url: "https://servicios.institucion.edu",
+      url: "https://estudiantes.itsoeh.edu.mx/index.php",
       color: "bg-green-100 dark:bg-green-900/20",
       textColor: "text-green-600 dark:text-green-400",
     },
@@ -44,10 +44,10 @@ export default function ConectEstudiantil() {
       textColor: "text-amber-600 dark:text-amber-400",
     },
     {
-      titulo: "Portal de Becas",
-      descripcion: "Información sobre becas y apoyos económicos",
+      titulo: "CONECT",
+      descripcion: "Consulta calificaciones, horarios y más",
       icono: <ExternalLink className="h-8 w-8" />,
-      url: "https://becas.institucion.edu",
+      url: "http://conect.itsoeh.edu.mx/mix_21_alu/",
       color: "bg-cyan-100 dark:bg-cyan-900/20",
       textColor: "text-cyan-600 dark:text-cyan-400",
     },

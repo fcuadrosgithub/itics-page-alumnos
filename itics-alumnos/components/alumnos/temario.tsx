@@ -6,87 +6,147 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Download, FileText, Search } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 export default function Temario() {
+  const { toast } = useToast()
   const [searchTerm, setSearchTerm] = useState("")
 
-  const asignaturas = {
-    basicas: [
-      { id: "mat101", nombre: "Cálculo Diferencial", pdf: "/temarios/calculo-diferencial.pdf" },
-      { id: "mat102", nombre: "Cálculo Integral", pdf: "/temarios/calculo-integral.pdf" },
-      { id: "mat103", nombre: "Álgebra Lineal", pdf: "/temarios/algebra-lineal.pdf" },
-      { id: "mat104", nombre: "Ecuaciones Diferenciales", pdf: "/temarios/ecuaciones-diferenciales.pdf" },
-      { id: "quim101", nombre: "Química", pdf: "/temarios/quimica.pdf" },
-      { id: "est101", nombre: "Probabilidad y Estadística", pdf: "/temarios/probabilidad-estadistica.pdf" },
+  const materiasPorSemestre = {
+    primero: [
+      { nombre: "Cálculo Diferencial", creditos: 5 },
+      { nombre: "Fundamentos de Programación", creditos: 5 },
+      { nombre: "Matemáticas Discretas I", creditos: 5 },
+      { nombre: "Introducción a las TIC's", creditos: 3 },
+      { nombre: "Taller de Ética", creditos: 4 },
+      { nombre: "Fundamentos de Investigación", creditos: 4 },
     ],
-    programacion: [
-      { id: "prog101", nombre: "Fundamentos de Programación", pdf: "/temarios/fundamentos-programacion.pdf" },
-      { id: "prog102", nombre: "Programación Orientada a Objetos", pdf: "/temarios/poo.pdf" },
-      { id: "prog103", nombre: "Estructura de Datos", pdf: "/temarios/estructura-datos.pdf" },
-      { id: "prog104", nombre: "Desarrollo de Aplicaciones Web", pdf: "/temarios/desarrollo-web.pdf" },
-      { id: "prog105", nombre: "Programación Web", pdf: "/temarios/programacion-web.pdf" },
-      {
-        id: "prog106",
-        nombre: "Desarrollo de Aplicaciones para Dispositivos Móviles",
-        pdf: "/temarios/apps-moviles.pdf",
-      },
+    segundo: [
+      { nombre: "Cálculo Integral", creditos: 5 },
+      { nombre: "Programación Orientada a Objetos", creditos: 5 },
+      { nombre: "Matemáticas Discretas II", creditos: 5 },
+      { nombre: "Probabilidad y Estadística", creditos: 5 },
+      { nombre: "Contabilidad y Costos", creditos: 5 },
+      { nombre: "Electricidad y Magnetismo", creditos: 5 },
     ],
-    redes: [
-      { id: "red101", nombre: "Fundamentos de Redes", pdf: "/temarios/fundamentos-redes.pdf" },
-      { id: "red102", nombre: "Redes de Computadoras", pdf: "/temarios/redes-computadoras.pdf" },
-      { id: "red103", nombre: "Administración de Redes", pdf: "/temarios/administracion-redes.pdf" },
-      { id: "red104", nombre: "Seguridad Informática", pdf: "/temarios/seguridad-informatica.pdf" },
+    tercero: [
+      { nombre: "Matemáticas Aplicadas a Comunicaciones", creditos: 4 },
+      { nombre: "Estructura y Organización de Datos", creditos: 5 },
+      { nombre: "Administración Gerencial", creditos: 4 },
+      { nombre: "Fundamentos de Bases Datos", creditos: 5 },
+      { nombre: "Álgebra Lineal", creditos: 5 },
+      { nombre: "Circuitos Eléctricos y Electrónicos", creditos: 5 },
     ],
-    sistemas: [
-      { id: "sis101", nombre: "Sistemas Operativos", pdf: "/temarios/sistemas-operativos.pdf" },
-      { id: "sis102", nombre: "Taller de Sistemas Operativos", pdf: "/temarios/taller-sistemas-operativos.pdf" },
-      { id: "sis103", nombre: "Arquitectura de Computadoras", pdf: "/temarios/arquitectura-computadoras.pdf" },
-      { id: "sis104", nombre: "Sistemas Programables", pdf: "/temarios/sistemas-programables.pdf" },
+    cuarto: [
+      { nombre: "Análisis de Señales y Sistemas de Comunicación", creditos: 5 },
+      { nombre: "Programación II", creditos: 5 },
+      { nombre: "Matemáticas Para la Toma de Decisiones", creditos: 5 },
+      { nombre: "Fundamentos de Redes", creditos: 5 },
+      { nombre: "Taller de Base de Datos", creditos: 4 },
+      { nombre: "Arquitectura de Computadoras", creditos: 4 },
+      { nombre: "Ingeniería de Software", creditos: 4 },
     ],
-    datos: [
-      { id: "dat101", nombre: "Fundamentos de Bases de Datos", pdf: "/temarios/fundamentos-bd.pdf" },
-      { id: "dat102", nombre: "Administración de Bases de Datos", pdf: "/temarios/administracion-bd.pdf" },
-      { id: "dat103", nombre: "Bases de Datos Distribuidas", pdf: "/temarios/bd-distribuidas.pdf" },
+    quinto: [
+      { nombre: "Redes de Computadora", creditos: 5 },
+      { nombre: "Telecomunicaciones", creditos: 5 },
+      { nombre: "Desarrollo Sustentable", creditos: 5 },
+      { nombre: "Base de Datos Distribuidas", creditos: 5 },
+      { nombre: "Sistemas Operativos I", creditos: 4 },
+      { nombre: "Taller de Ingeniería de Software", creditos: 4 },
+      { nombre: "Administración de Proyectos", creditos: 4 },
     ],
-    ingenieria: [
-      { id: "ing101", nombre: "Ingeniería de Software", pdf: "/temarios/ingenieria-software.pdf" },
-      { id: "ing102", nombre: "Gestión de Proyectos de Software", pdf: "/temarios/gestion-proyectos.pdf" },
-      { id: "ing103", nombre: "Taller de Investigación I", pdf: "/temarios/investigacion-1.pdf" },
-      { id: "ing104", nombre: "Taller de Investigación II", pdf: "/temarios/investigacion-2.pdf" },
+    sexto: [
+      { nombre: "Redes Emergentes", creditos: 5 },
+      { nombre: "Programación WEB", creditos: 5 },
+      { nombre: "Desarrollo de Emprendedores", creditos: 5 },
+      { nombre: "Taller de Investigación I", creditos: 4 },
+      { nombre: "Sistemas Operativos II", creditos: 5 },
+      { nombre: "Tecnologías Inalámbricas", creditos: 4 },
+      { nombre: "Interacción Humano Computadora", creditos: 4 },
+    ],
+    septimo: [
+      { nombre: "Desarrollo de Aplicaciones para Dispositivos Móviles", creditos: 5 },
+      { nombre: "Analítica de Datos I", creditos: 5 },
+      { nombre: "Administración y Seguridad de Redes", creditos: 5 },
+      { nombre: "Taller de Investigación II", creditos: 4 },
+      { nombre: "Negocios Electrónicos I", creditos: 4 },
+    ],
+    octavo: [
+      { nombre: "Auditoría en Tecnologías de Información", creditos: 4 },
+      { nombre: "Ingeniería del Conocimiento", creditos: 4 },
+      { nombre: "Analítica de Datos II", creditos: 5 },
+      { nombre: "Internet de las Cosas", creditos: 5 },
+      { nombre: "Negocios Electrónicos II", creditos: 4 },
+      { nombre: "Ciberseguridad y Protección de Datos", creditos: 5 },
+      { nombre: "Ingeniería de Seguridad en la Nube", creditos: 5 },
     ],
   }
 
-  const allAsignaturas = [
-    ...asignaturas.basicas,
-    ...asignaturas.programacion,
-    ...asignaturas.redes,
-    ...asignaturas.sistemas,
-    ...asignaturas.datos,
-    ...asignaturas.ingenieria,
-  ]
+  const semestreLabels = {
+    primero: "1er Semestre",
+    segundo: "2do Semestre",
+    tercero: "3er Semestre",
+    cuarto: "4to Semestre",
+    quinto: "5to Semestre",
+    sexto: "6to Semestre",
+    septimo: "7mo Semestre",
+    octavo: "8vo Semestre",
+  }
 
-  const filteredAsignaturas = searchTerm
-    ? allAsignaturas.filter((asignatura) => asignatura.nombre.toLowerCase().includes(searchTerm.toLowerCase()))
+  const todasLasMaterias = Object.entries(materiasPorSemestre).flatMap(([semestre, materias]) =>
+    materias.map((materia) => ({ ...materia, semestre }))
+  )
+
+  // Función para quitar acentos y normalizar texto
+  const normalizeText = (text: string) =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+
+  const materiasFiltradas = searchTerm
+    ? todasLasMaterias.filter((materia) =>
+        normalizeText(materia.nombre).includes(normalizeText(searchTerm))
+      )
     : []
 
-  const handleDownload = (pdf: string, nombre: string) => {
-    // En una implementación real, esto descargaría el PDF
-    alert(`Descargando temario de ${nombre}`)
+  const generarRutaPDF = (nombre: string) => {
+    const nombreNormalizado = nombre
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "") // quitar acentos
+      .replace(/\s+/g, "_") // espacios por guiones bajos
+      .replace(/[^\w]/g, "") // quitar símbolos no válidos
+    return `/temarios/${nombreNormalizado}.pdf`
   }
+
+  const handleDownload = (nombreMateria: string, creditos: number) => {
+  const ruta = generarRutaPDF(nombreMateria)
+  const link = document.createElement("a")
+  link.href = ruta
+  link.download = `${nombreMateria}.pdf`
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+
+  toast({
+    title: "Descarga iniciada",
+    description: `Descargando temario de "${nombreMateria}" (${creditos} créditos)`,
+  })
+}
+
 
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>Temarios</CardTitle>
-          <CardDescription>Consulta y descarga los temarios de las asignaturas de la carrera</CardDescription>
+          <CardTitle>Temarios por Semestre</CardTitle>
+          <CardDescription>
+            Consulta y descarga los temarios de las asignaturas organizados por semestre
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="relative mb-6">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Buscar asignatura..."
+              placeholder="Buscar materia..."
               className="pl-8"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -96,21 +156,26 @@ export default function Temario() {
           {searchTerm && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-3">Resultados de búsqueda</h3>
-              {filteredAsignaturas.length > 0 ? (
+              {materiasFiltradas.length > 0 ? (
                 <div className="grid gap-2">
-                  {filteredAsignaturas.map((asignatura) => (
+                  {materiasFiltradas.map((materia, index) => (
                     <div
-                      key={asignatura.id}
+                      key={index}
                       className="flex items-center justify-between p-3 border rounded-md hover:bg-muted/50"
                     >
                       <div className="flex items-center">
                         <FileText className="h-5 w-5 mr-2 text-muted-foreground" />
-                        <span>{asignatura.nombre}</span>
+                        <div>
+                          <span className="font-medium">{materia.nombre}</span>
+                          <div className="text-sm text-muted-foreground">
+                            {semestreLabels[materia.semestre as keyof typeof semestreLabels]} • {materia.creditos} créditos
+                          </div>
+                        </div>
                       </div>
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => handleDownload(asignatura.pdf, asignatura.nombre)}
+                        onClick={() => handleDownload(materia.nombre, materia.creditos)}
                       >
                         <Download className="h-4 w-4 mr-1" />
                         <span>Descargar</span>
@@ -119,43 +184,55 @@ export default function Temario() {
                   ))}
                 </div>
               ) : (
-                <p className="text-muted-foreground">No se encontraron asignaturas con ese nombre.</p>
+                <p className="text-muted-foreground">No se encontraron materias con ese nombre.</p>
               )}
             </div>
           )}
 
-          <Tabs defaultValue="basicas">
-            <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-6">
-              <TabsTrigger value="basicas">Básicas</TabsTrigger>
-              <TabsTrigger value="programacion">Programación</TabsTrigger>
-              <TabsTrigger value="redes">Redes</TabsTrigger>
-              <TabsTrigger value="sistemas">Sistemas</TabsTrigger>
-              <TabsTrigger value="datos">Datos</TabsTrigger>
-              <TabsTrigger value="ingenieria">Ingeniería</TabsTrigger>
+          <Tabs defaultValue="primero">
+            <TabsList className="grid grid-cols-4 md:grid-cols-8 mb-6">
+              {Object.entries(semestreLabels).map(([key, label]) => (
+                <TabsTrigger key={key} value={key} className="text-xs">
+                  {label}
+                </TabsTrigger>
+              ))}
             </TabsList>
 
-            {Object.entries(asignaturas).map(([categoria, lista]) => (
-              <TabsContent key={categoria} value={categoria} className="mt-0">
-                <div className="grid gap-2">
-                  {lista.map((asignatura) => (
+            {Object.entries(materiasPorSemestre).map(([semestre, materias]) => (
+              <TabsContent key={semestre} value={semestre} className="mt-0">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold mb-4">
+                    {semestreLabels[semestre as keyof typeof semestreLabels]}
+                  </h3>
+                  {materias.map((materia, index) => (
                     <div
-                      key={asignatura.id}
-                      className="flex items-center justify-between p-3 border rounded-md hover:bg-muted/50"
+                      key={index}
+                      className="flex items-center justify-between p-4 border rounded-md hover:bg-muted/50 transition-colors"
                     >
-                      <div className="flex items-center">
-                        <FileText className="h-5 w-5 mr-2 text-muted-foreground" />
-                        <span>{asignatura.nombre}</span>
+                      <div className="flex items-center flex-1">
+                        <FileText className="h-5 w-5 mr-3 text-muted-foreground" />
+                        <div className="flex-1">
+                          <span className="font-medium">{materia.nombre}</span>
+                          <div className="text-sm text-muted-foreground">{materia.creditos} créditos</div>
+                        </div>
                       </div>
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => handleDownload(asignatura.pdf, asignatura.nombre)}
+                        onClick={() => handleDownload(materia.nombre, materia.creditos)}
+                        className="ml-4"
                       >
                         <Download className="h-4 w-4 mr-1" />
                         <span>Descargar</span>
                       </Button>
                     </div>
                   ))}
+                  <div className="mt-4 p-3 bg-muted/30 rounded-md">
+                    <p className="text-sm text-muted-foreground">
+                      <strong>Total de créditos del semestre:</strong>{" "}
+                      {materias.reduce((total, materia) => total + materia.creditos, 0)} créditos
+                    </p>
+                  </div>
                 </div>
               </TabsContent>
             ))}

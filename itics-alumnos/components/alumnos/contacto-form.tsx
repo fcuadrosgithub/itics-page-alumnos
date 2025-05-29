@@ -15,6 +15,8 @@ export default function ContactoForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [correoError, setCorreoError] = useState("")
+
   const [formData, setFormData] = useState({
     nombre: "",
     matricula: "",
@@ -31,9 +33,18 @@ export default function ContactoForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
+    // Validación de correo
+    const correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (!correoRegex.test(formData.correo)) {
+      setCorreoError("El correo electrónico no es válido.")
+      setIsSubmitting(false)
+      return
+    } else {
+      setCorreoError("")
+    }
+
     // Simulación de envío de formulario
     try {
-      // En una implementación real, aquí se enviaría el formulario a un endpoint
       await new Promise((resolve) => setTimeout(resolve, 1500))
 
       setIsSuccess(true)
@@ -42,7 +53,6 @@ export default function ContactoForm() {
         description: "Tu mensaje ha sido enviado correctamente. Te contactaremos pronto.",
       })
 
-      // Resetear el formulario después de 2 segundos
       setTimeout(() => {
         setFormData({
           nombre: "",
@@ -113,6 +123,7 @@ export default function ContactoForm() {
                 onChange={handleChange}
                 disabled={isSubmitting}
               />
+              {correoError && <p className="text-sm text-red-600">{correoError}</p>}
             </div>
 
             <div className="space-y-2">

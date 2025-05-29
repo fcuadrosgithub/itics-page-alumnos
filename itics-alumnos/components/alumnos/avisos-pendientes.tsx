@@ -19,7 +19,7 @@ export default function AvisosPendientes({ showAll = false }: AvisosPendientesPr
       descripcion: "Recuerda realizar la evaluación docente antes del 20 de mayo.",
       icono: <AlertCircle className="h-4 w-4" />,
       fechaLimite: "20 de mayo, 2025",
-      url: "https://evaluacion.institucion.edu",
+      url: "http://evaluaciondocente.itsoeh.edu.mx",
       visible: true,
     },
     {
@@ -29,7 +29,7 @@ export default function AvisosPendientes({ showAll = false }: AvisosPendientesPr
       descripcion: "El pago de la colegiatura debe realizarse antes del 15 de mayo.",
       icono: <CreditCard className="h-4 w-4" />,
       fechaLimite: "15 de mayo, 2025",
-      url: "https://pagos.institucion.edu",
+      url: "https://estudiantes.itsoeh.edu.mx/index.php",
       visible: true,
     },
     {
@@ -39,7 +39,7 @@ export default function AvisosPendientes({ showAll = false }: AvisosPendientesPr
       descripcion: "El periodo de reinscripciones comienza el 1 de junio.",
       icono: <Calendar className="h-4 w-4" />,
       fechaLimite: "1 de junio, 2025",
-      url: "https://reinscripciones.institucion.edu",
+      url: "https://estudiantes.itsoeh.edu.mx/index.php",
       visible: true,
     },
     {
@@ -49,7 +49,7 @@ export default function AvisosPendientes({ showAll = false }: AvisosPendientesPr
       descripcion: "Si estás por egresar, inicia tus trámites de titulación.",
       icono: <GraduationCap className="h-4 w-4" />,
       fechaLimite: "30 de mayo, 2025",
-      url: "https://titulacion.institucion.edu",
+      url: "http://conect.itsoeh.edu.mx/mix_21_alu/",
       visible: true,
     },
   ])

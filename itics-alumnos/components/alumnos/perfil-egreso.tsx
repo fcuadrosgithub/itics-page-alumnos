@@ -1,103 +1,207 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Code, Database, Globe, Network, PenTool, Users } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import {
+  Brain,
+  Code,
+  Network,
+  Users,
+  Shield,
+  Building,
+  Lightbulb,
+  Target,
+  GraduationCap,
+} from "lucide-react"
 
 export default function PerfilEgreso() {
-  const competencias = [
+  const objetivosEducacionales = [
     {
-      icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Desarrollo de Software",
-      description:
-        "Capacidad para diseñar, implementar y mantener aplicaciones utilizando metodologías ágiles y buenas prácticas de programación.",
+      codigo: "OE1",
+      descripcion:
+        "Diseñan, implementan y administran redes de cómputo y comunicaciones, bajo estándares de seguridad de la información.",
+      icono: <Network className="h-6 w-6 text-blue-600" />,
     },
     {
-      icon: <Network className="h-8 w-8 text-primary" />,
-      title: "Redes y Telecomunicaciones",
-      description:
-        "Habilidad para diseñar, implementar y administrar infraestructuras de redes y sistemas de telecomunicaciones.",
+      codigo: "OE2",
+      descripcion: "Desarrollan software basado en metodologías emergentes.",
+      icono: <Code className="h-6 w-6 text-green-600" />,
     },
     {
-      icon: <Database className="h-8 w-8 text-primary" />,
-      title: "Gestión de Datos",
-      description:
-        "Competencia para diseñar e implementar bases de datos, así como para analizar y procesar grandes volúmenes de información.",
+      codigo: "OE3",
+      descripcion:
+        "Desempeñan funciones de auditoría en el campo de las Tecnologías de la Información y Comunicaciones.",
+      icono: <Shield className="h-6 w-6 text-red-600" />,
     },
     {
-      icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Tecnologías Web",
-      description:
-        "Capacidad para desarrollar aplicaciones y servicios web utilizando tecnologías modernas y frameworks actuales.",
+      codigo: "OE4",
+      descripcion:
+        "Participan en proyectos de TI o crea empresas, en el ámbito de las tecnologías de la información bajo un marco legal.",
+      icono: <Building className="h-6 w-6 text-purple-600" />,
+    },
+  ]
+
+  const atributosEgresado = [
+    {
+      codigo: "AE1",
+      descripcion:
+        "Identifica, formula y resuelve problemas complejos de desarrollo de software...",
+      categoria: "Desarrollo de Software",
     },
     {
-      icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Trabajo en Equipo",
-      description:
-        "Habilidad para colaborar efectivamente en equipos multidisciplinarios y comunicar ideas técnicas de manera clara.",
+      codigo: "AE2",
+      descripcion:
+        "Analiza, implementa y administra redes de computadoras para la transferencia de datos...",
+      categoria: "Redes y Comunicaciones",
     },
     {
-      icon: <Brain className="h-8 w-8 text-primary" />,
-      title: "Resolución de Problemas",
-      description:
-        "Capacidad analítica para identificar, formular y resolver problemas complejos aplicando principios de ingeniería.",
+      codigo: "AE3",
+      descripcion:
+        "Diseña e Implementa soluciones utilizando las tecnologías de la información...",
+      categoria: "Soluciones Integrales",
     },
     {
-      icon: <PenTool className="h-8 w-8 text-primary" />,
-      title: "Innovación",
-      description: "Habilidad para proponer soluciones creativas e innovadoras a problemas tecnológicos actuales.",
+      codigo: "AE4",
+      descripcion:
+        "Identifica, formula y resuelve problemas de ingeniería aplicando los principios y teorías...",
+      categoria: "Fundamentos de Ingeniería",
     },
+    {
+      codigo: "AE5",
+      descripcion:
+        "Implementa comunicación integral, clara y efectiva, con diferentes audiencias...",
+      categoria: "Comunicación",
+    },
+    {
+      codigo: "AE6",
+      descripcion:
+        "Aplicar el marco legal en el desempeño de funciones que involucren tecnologías...",
+      categoria: "Marco Legal y Ética",
+    },
+    {
+      codigo: "AE7",
+      descripcion:
+        "Identifica la necesidad de mantenerse actualizado en las nuevas tendencias...",
+      categoria: "Aprendizaje Continuo",
+    },
+    {
+      codigo: "AE8",
+      descripcion:
+        "Trabaja efectivamente en equipos de manera autónoma y autorregulada...",
+      categoria: "Trabajo en Equipo",
+    },
+    {
+      codigo: "AE9",
+      descripcion:
+        "Implementa soluciones de seguridad y auditoría en tecnologías de la información...",
+      categoria: "Seguridad y Auditoría",
+    },
+  ]
+
+  const perfilEgresado = [
+    "Diseñar, implementar y administrar redes de cómputo y comunicaciones...",
+    "Diseñar, desarrollar y mantener sistemas de bases de datos...",
+    "Integrar las diferentes arquitecturas de hardware y administrar plataformas de software...",
+    "Implementar sistemas de seguridad bajo políticas internas...",
+    "Observar los aspectos legales del uso y explotación de las TIC...",
+    "Desarrollar e implementar sistemas de información para el control...",
+    "Analizar, diseñar y programar dispositivos con software empotrado.",
+    "Utilizar tecnologías y herramientas actuales y emergentes...",
+    "Integrar soluciones basadas en sistemas de comunicaciones...",
+    "Desempeñar funciones de consultoría y auditoría en el campo de las TIC.",
+    "Crear empresas en el ámbito de las Tecnologías de la Información...",
+    "Administrar proyectos que involucren Tecnologías de la Información...",
   ]
 
   return (
     <div className="space-y-8">
       <Card>
         <CardHeader>
-          <CardTitle>Perfil de Egreso</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <Target className="h-6 w-6 text-primary" />
+            Perfil de Egreso
+          </CardTitle>
           <CardDescription>
-            Objetivos educativos y competencias del egresado de la carrera de Ingeniería en Tecnologías de la
-            Información y Comunicaciones
+            Objetivos educacionales, atributos y competencias del egresado de la carrera de Ingeniería en Tecnologías de
+            la Información y Comunicaciones
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="mb-4">
+          <p className="mb-6 text-muted-foreground">
             El egresado de la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones es un profesional
             capaz de diseñar, implementar y administrar soluciones tecnológicas innovadoras que respondan a las
             necesidades actuales de las organizaciones, contribuyendo a su transformación digital y mejora continua.
           </p>
 
-          <Accordion type="single" collapsible className="mt-6">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Objetivos Educativos Generales</AccordionTrigger>
-              <AccordionContent>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Formar profesionales con sólidos conocimientos técnicos en el área de las TICs.</li>
-                  <li>
-                    Desarrollar habilidades para el diseño e implementación de soluciones tecnológicas innovadoras.
-                  </li>
-                  <li>Fomentar la capacidad de adaptación a los cambios tecnológicos constantes.</li>
-                  <li>Promover el pensamiento crítico y la resolución de problemas complejos.</li>
-                  <li>Cultivar habilidades de comunicación efectiva y trabajo en equipo.</li>
-                  <li>Impulsar una actitud ética y responsable en el ejercicio profesional.</li>
-                </ul>
+          <Accordion type="multiple" className="space-y-4">
+            {/* Perfil del Egresado (ahora primero) */}
+            <AccordionItem value="perfil" className="border rounded-lg px-4">
+              <AccordionTrigger className="py-4 hover:no-underline">
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="h-5 w-5 text-green-600" />
+                  <span className="font-semibold">Perfil del Egresado</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <div className="space-y-3">
+                  {perfilEgresado.map((competencia, index) => (
+                    <div key={index} className="p-3 border rounded-lg bg-muted/30">
+                      <p className="text-sm">{competencia}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Atributos del Egresado */}
+            <AccordionItem value="atributos" className="border rounded-lg px-4">
+              <AccordionTrigger className="py-4 hover:no-underline">
+                <div className="flex items-center gap-3">
+                  <Brain className="h-5 w-5 text-blue-600" />
+                  <span className="font-semibold">Atributos del Egresado</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <div className="grid gap-4">
+                  {atributosEgresado.map((atributo) => (
+                    <div key={atributo.codigo} className="p-4 border rounded-lg bg-muted/30">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Badge variant="secondary">{atributo.codigo}</Badge>
+                        <Badge variant="outline">{atributo.categoria}</Badge>
+                      </div>
+                      <p className="text-sm">{atributo.descripcion}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Objetivos Educacionales */}
+            <AccordionItem value="objetivos" className="border rounded-lg px-4">
+              <AccordionTrigger className="py-4 hover:no-underline">
+                <div className="flex items-center gap-3">
+                  <Lightbulb className="h-5 w-5 text-amber-600" />
+                  <span className="font-semibold">Objetivos Educacionales</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <div className="grid gap-4">
+                  {objetivosEducacionales.map((objetivo) => (
+                    <div key={objetivo.codigo} className="flex gap-4 p-4 border rounded-lg bg-muted/30">
+                      <div className="flex-shrink-0">{objetivo.icono}</div>
+                      <div>
+                        <Badge variant="outline" className="mb-2">
+                          {objetivo.codigo}
+                        </Badge>
+                        <p className="text-sm">{objetivo.descripcion}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </CardContent>
       </Card>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Competencias del Egresado</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {competencias.map((competencia, index) => (
-          <Card key={index} className="transition-all hover:shadow-md">
-            <CardHeader className="flex flex-row items-center gap-4">
-              {competencia.icon}
-              <CardTitle className="text-lg">{competencia.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>{competencia.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
     </div>
   )
 }
