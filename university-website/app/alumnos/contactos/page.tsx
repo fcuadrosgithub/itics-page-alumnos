@@ -120,7 +120,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>JR</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -152,7 +151,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>YM</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -184,7 +182,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>JM</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -216,7 +213,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>TH</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -248,7 +244,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>SS</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -280,7 +275,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>PS</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -312,7 +306,6 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
             <AvatarFallback>EM</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -325,7 +318,7 @@ export default function ContactosPage() {
                   href="mailto:servicios.escolares@itsoeh.edu.mx"
                   className="ml-1 text-blue-600 hover:underline"
                 >
-                  psalazar@itsoeh.edu.mx
+                  Esantiango@itsoeh.edu.mx
                 </a>
               </div>
             </div>
@@ -344,8 +337,7 @@ export default function ContactosPage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="flex items-start space-x-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src="/alumnos/imagenes/doc_javier.jpg" alt="Doc. Javier Cuadros Romero" />
-            <AvatarFallback>MC</AvatarFallback>
+            <AvatarFallback>MT</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
             <h4 className="font-semibold">Mtro. María Guadalupe Tolentino Cruz</h4>
@@ -357,7 +349,7 @@ export default function ContactosPage() {
                   href="mailto:servicios.escolares@itsoeh.edu.mx"
                   className="ml-1 text-blue-600 hover:underline"
                 >
-                  psalazar@itsoeh.edu.mx
+                  mtolentino@itsoeh.edu.mx
                 </a>
               </div>
             </div>
