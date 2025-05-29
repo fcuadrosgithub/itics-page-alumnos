@@ -17,7 +17,10 @@ export default function AlumnosPage() {
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <Link href="/alumnos/perfil-egreso" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#0a2463] text-white text-xs rounded-bl-md">
+              Académico
+            </div>
             <CardHeader>
               <CardTitle>Perfil de Egreso</CardTitle>
               <CardDescription>Conoce las competencias que desarrollarás durante tu formación</CardDescription>
@@ -30,7 +33,10 @@ export default function AlumnosPage() {
           </Card>
         </Link>
         <Link href="/alumnos/planes-temarios" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#0a2463] text-white text-xs rounded-bl-md">
+              Académico
+            </div>
             <CardHeader>
               <CardTitle>Planes y Temarios</CardTitle>
               <CardDescription>Consulta los planes de estudio y temarios de tu carrera</CardDescription>
@@ -43,7 +49,10 @@ export default function AlumnosPage() {
           </Card>
         </Link>
         <Link href="/alumnos/contactos" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#0a2463] text-white text-xs rounded-bl-md">
+              Académico
+            </div>
             <CardHeader>
               <CardTitle>Contactos</CardTitle>
               <CardDescription>Directorio de contactos académicos y administrativos</CardDescription>
@@ -56,7 +65,10 @@ export default function AlumnosPage() {
           </Card>
         </Link>
         <Link href="/alumnos/calendario" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#0a2463] text-white text-xs rounded-bl-md">
+              Académico
+            </div>
             <CardHeader>
               <CardTitle>Calendario Escolar</CardTitle>
               <CardDescription>Consulta las fechas importantes del ciclo escolar</CardDescription>
@@ -68,21 +80,25 @@ export default function AlumnosPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link href="/alumnos/conect" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
-            <CardHeader>
-              <CardTitle>Conect</CardTitle>
-              <CardDescription>Plataforma de comunicación y recursos educativos</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-sm text-muted-foreground">
-                Accede a la plataforma educativa para consultar materiales y comunicarte con tus profesores.
+          <Link href="http://conect.itsoeh.edu.mx/mix_21_alu/" className="block" target="_blank" rel="noopener noreferrer">
+            <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+              <div className="absolute top-0 right-0 px-3 py-1 bg-[#0a2463] text-white text-xs rounded-bl-md">
+                Académico
               </div>
-            </CardContent>
-          </Card>
-        </Link>
+              <CardHeader>
+                <CardTitle>Conect</CardTitle>
+                <CardDescription>Plataforma de comunicación y recursos educativos</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="text-sm text-muted-foreground">Accede a la plataforma educativa para consultar materiales y comunicarte con tus profesores.</div>
+              </CardContent>
+            </Card>
+          </Link>
         <Link href="/alumnos/evaluacion-docente" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#e63946] text-white text-xs rounded-bl-md">
+              Trámite
+            </div>
             <CardHeader>
               <CardTitle>Evaluación Docente</CardTitle>
               <CardDescription>Evalúa el desempeño de tus profesores</CardDescription>
@@ -94,8 +110,11 @@ export default function AlumnosPage() {
             </CardContent>
           </Card>
         </Link>
-        <Link href="/alumnos/pagos" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+        <Link href="https://estudiantes.itsoeh.edu.mx/" className="block" target="_blank" rel="noopener noreferrer">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#e63946] text-white text-xs rounded-bl-md">
+              Trámite
+            </div>
             <CardHeader>
               <CardTitle>Pagos de 2da. Oportunidad</CardTitle>
               <CardDescription>Información sobre pagos de exámenes de segunda oportunidad</CardDescription>
@@ -108,7 +127,10 @@ export default function AlumnosPage() {
           </Card>
         </Link>
         <Link href="/alumnos/reinscripciones" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#e63946] text-white text-xs rounded-bl-md">
+              Trámite
+            </div>
             <CardHeader>
               <CardTitle>Reinscripciones</CardTitle>
               <CardDescription>Proceso de reinscripción para el siguiente semestre</CardDescription>
@@ -121,7 +143,10 @@ export default function AlumnosPage() {
           </Card>
         </Link>
         <Link href="/alumnos/titulacion" className="block">
-          <Card className="h-full transition-all hover:shadow-md">
+          <Card className="h-full transition-all hover:shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#e63946] text-white text-xs rounded-bl-md">
+              Trámite
+            </div>
             <CardHeader>
               <CardTitle>Titulación</CardTitle>
               <CardDescription>Información sobre el proceso de titulación</CardDescription>

@@ -24,7 +24,7 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/alumnos">
                   <Button variant="secondary" size="lg">
-                    Portal de Alumnos
+                    Alumnos
                   </Button>
                 </Link>
                 <Link href="/aspirantes">

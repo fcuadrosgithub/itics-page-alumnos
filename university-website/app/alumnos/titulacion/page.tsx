@@ -1,11 +1,11 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Badge } from "@/components/ui/badge"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { BookOpen, GraduationCap } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { BookOpen, GraduationCap } from "lucide-react";
 
 export default function TitulacionPage() {
   return (
@@ -21,8 +21,7 @@ export default function TitulacionPage() {
         <GraduationCap className="h-4 w-4" />
         <AlertTitle>Atención egresados</AlertTitle>
         <AlertDescription>
-          El trámite de titulación puede iniciarse una vez que hayas acreditado el 100% de los créditos de tu plan de
-          estudios, incluyendo servicio social, residencia profesional y actividades complementarias.
+          El trámite de titulación puede iniciarse una vez que hayas acreditado el 100% de los créditos de tu plan de estudios, incluyendo servicio social, residencia profesional y actividades complementarias.
         </AlertDescription>
       </Alert>
 
@@ -40,130 +39,69 @@ export default function TitulacionPage() {
             <CardHeader>
               <CardTitle>Opciones de Titulación</CardTitle>
               <CardDescription>
-                El ITSOEH ofrece diversas opciones para que puedas obtener tu título profesional
+                El ITSOEH ofrece diversas opciones para que puedas obtener tu título profesional.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <p>
-                De acuerdo con el Reglamento de Titulación vigente, los egresados del Instituto Tecnológico Superior del
-                Occidente del Estado de Hidalgo pueden optar por alguna de las siguientes modalidades de titulación:
+                De acuerdo con el Reglamento de Titulación vigente, los egresados del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo pueden optar por alguna de las siguientes modalidades de titulación:
               </p>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
+                {/* Opciones de Titulación */}
+                {[
+                  {
+                    title: 'Titulación Integral',
+                    description: 'Consiste en la elaboración de un proyecto acorde a tu perfil profesional mediante el informe de residencia profesional.',
+                    badge: 'Recomendada',
+                    note: 'Esta es la opción más común y recomendada para la mayoría de los egresados.',
+                  },
+                  {
+                    title: 'Tesis Profesional',
+                    description: 'Consiste en un trabajo de investigación que aborda un tema específico relacionado con tu carrera, con defensa ante un jurado.',
+                    badge: 'Tradicional',
+                    note: 'Ideal para estudiantes interesados en la investigación o que planean continuar con estudios de posgrado.',
+                  },
+                  {
+                    title: 'Examen CENEVAL (EGEL)',
+                    description: 'Aprobación del Examen General de Egreso de Licenciatura del CENEVAL con resultado satisfactorio o sobresaliente.',
+                    badge: 'Externa',
+                    note: 'Esta opción demuestra tus conocimientos a nivel nacional y puede darte ventajas en el mercado laboral.',
+                  },
+                  {
+                    title: 'Promedio General Sobresaliente',
+                    description: 'Haber obtenido un promedio general igual o mayor a 95 durante toda la carrera, sin haber reprobado ninguna asignatura.',
+                    badge: 'Por desempeño',
+                    note: 'Reconoce la excelencia académica durante toda tu trayectoria universitaria.',
+                  },
+                  {
+                    title: 'Estudios de Posgrado',
+                    description: 'Acreditar al menos el 50% de los créditos de un programa de maestría afín a tu carrera en una institución reconocida.',
+                    badge: 'Continuidad académica',
+                    note: 'Ideal para quienes desean continuar inmediatamente con estudios de posgrado.',
+                  },
+                  {
+                    title: 'Proyecto de Investigación',
+                    description: 'Elaboración de un proyecto de investigación científica o aplicada, con defensa ante un jurado.',
+                    badge: 'Especializada',
+                    note: 'Opción para estudiantes que han participado en proyectos de investigación durante su carrera.',
+                  },
+                ].map((option, index) => (
+                  <div key={index} className="rounded-lg border p-4">
+                    <div className="flex items-center">
+                      <div className="rounded-full bg-[#0a2463] p-2 mr-3">
+                        <BookOpen className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="font-semibold">{option.title}</h3>
                     </div>
-                    <h3 className="font-semibold">Titulación Integral</h3>
+                    <div className="mt-2 space-y-2">
+                      <p>{option.description}</p>
+                      <Badge>{option.badge}</Badge>
+                      <p className="text-sm text-muted-foreground">{option.note}</p>
+                    </div>
                   </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Consiste en la elaboración de un proyecto acorde a tu perfil profesional mediante el informe de
-                      residencia profesional.
-                    </p>
-                    <Badge>Recomendada</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Esta es la opción más común y recomendada para la mayoría de los egresados.
-                    </p>
-                  </div>
-                </div>
+                ))}
 
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="font-semibold">Tesis Profesional</h3>
-                  </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Consiste en un trabajo de investigación que aborda un tema específico relacionado con tu carrera,
-                      con defensa ante un jurado.
-                    </p>
-                    <Badge variant="outline">Tradicional</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Ideal para estudiantes interesados en la investigación o que planean continuar con estudios de
-                      posgrado.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="font-semibold">Examen CENEVAL (EGEL)</h3>
-                  </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Aprobación del Examen General de Egreso de Licenciatura del CENEVAL con resultado satisfactorio o
-                      sobresaliente.
-                    </p>
-                    <Badge variant="secondary">Externa</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Esta opción demuestra tus conocimientos a nivel nacional y puede darte ventajas en el mercado
-                      laboral.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="font-semibold">Promedio General Sobresaliente</h3>
-                  </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Haber obtenido un promedio general igual o mayor a 95 durante toda la carrera, sin haber reprobado
-                      ninguna asignatura.
-                    </p>
-                    <Badge variant="outline">Por desempeño</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Reconoce la excelencia académica durante toda tu trayectoria universitaria.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="font-semibold">Estudios de Posgrado</h3>
-                  </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Acreditar al menos el 50% de los créditos de un programa de maestría afín a tu carrera en una
-                      institución reconocida.
-                    </p>
-                    <Badge variant="secondary">Continuidad académica</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Ideal para quienes desean continuar inmediatamente con estudios de posgrado.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="rounded-lg border p-4">
-                  <div className="flex items-center">
-                    <div className="rounded-full bg-[#0a2463] p-2 mr-3">
-                      <BookOpen className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="font-semibold">Proyecto de Investigación</h3>
-                  </div>
-                  <div className="mt-2 space-y-2">
-                    <p>
-                      Elaboración de un proyecto de investigación científica o aplicada, con defensa ante un jurado.
-                    </p>
-                    <Badge variant="outline">Especializada</Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Opción para estudiantes que han participado en proyectos de investigación durante su carrera.
-                    </p>
-                  </div>
-                </div>
               </div>
 
               <Accordion type="single" collapsible className="w-full">
@@ -257,10 +195,7 @@ export default function TitulacionPage() {
               <div>
                 <h3 className="text-lg font-semibold">Requisitos generales:</h3>
                 <ul className="list-disc pl-6 space-y-2 mt-2">
-                  <li>
-                    Certificado completo de estudios profesionales que acredite haber aprobado el 100% de los créditos
-                    del plan de estudios.
-                  </li>
+                  <li>Certificado completo de estudios profesionales que acredite haber aprobado el 100% de los créditos del plan de estudios.</li>
                   <li>Constancia de liberación del Servicio Social.</li>
                   <li>Constancia de acreditación de Actividades Complementarias.</li>
                   <li>Constancia de liberación de Residencia Profesional.</li>
@@ -299,8 +234,7 @@ export default function TitulacionPage() {
                     <h4 className="font-semibold">Examen CENEVAL (EGEL)</h4>
                     <ul className="list-disc pl-6 space-y-1 mt-2">
                       <li>
-                        Testimonio de Desempeño Satisfactorio (TDS) o Testimonio de Desempeño Sobresaliente (TDSS)
-                        original y copia.
+                        Testimonio de Desempeño Satisfactorio (TDS) o Testimonio de Desempeño Sobresaliente (TDSS) original y copia.
                       </li>
                       <li>Constancia de resultado individual del CENEVAL.</li>
                     </ul>
@@ -309,10 +243,7 @@ export default function TitulacionPage() {
                   <div className="rounded-lg border p-4">
                     <h4 className="font-semibold">Promedio General Sobresaliente</h4>
                     <ul className="list-disc pl-6 space-y-1 mt-2">
-                      <li>
-                        Certificado de estudios con promedio general igual o mayor a 95 (sin redondeo) y sin asignaturas
-                        reprobadas.
-                      </li>
+                      <li>Certificado de estudios con promedio general igual o mayor a 95 (sin redondeo) y sin asignaturas reprobadas.</li>
                       <li>Constancia de no haber presentado exámenes de segunda oportunidad.</li>
                     </ul>
                   </div>
@@ -320,15 +251,10 @@ export default function TitulacionPage() {
                   <div className="rounded-lg border p-4">
                     <h4 className="font-semibold">Estudios de Posgrado</h4>
                     <ul className="list-disc pl-6 space-y-1 mt-2">
-                      <li>
-                        Certificado parcial de estudios de posgrado que acredite haber aprobado al menos el 50% de los
-                        créditos.
-                      </li>
+                      <li>Certificado parcial de estudios de posgrado que acredite haber aprobado al menos el 50% de los créditos.</li>
                       <li>Carta de aceptación al programa de posgrado.</li>
                       <li>Plan de estudios del programa de posgrado.</li>
-                      <li>
-                        Dictamen de equivalencia o afinidad del programa de posgrado con respecto a la carrera cursada.
-                      </li>
+                      <li>Dictamen de equivalencia o afinidad del programa de posgrado con respecto a la carrera cursada.</li>
                     </ul>
                   </div>
 
@@ -354,4 +280,12 @@ export default function TitulacionPage() {
                   <li>Formato de registro de título ante la Dirección General de Profesiones.</li>
                   <li>Formato de no adeudo de biblioteca, laboratorios y áreas administrativas.</li>
                   <li>Copia de identificación oficial vigente (INE, pasaporte).</li>
-                \
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}

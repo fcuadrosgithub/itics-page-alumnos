@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { FileDown, FileText } from "lucide-react"
 
 export default function PlanesTemarios() {
   return (
@@ -130,7 +131,12 @@ export default function PlanesTemarios() {
                 </div>
 
                 <div className="flex justify-center mt-6">
-                  <Button>Descargar Plan de Estudios Completo</Button>
+                  <a href="/files/plan-estudios-itic-2010-225.pdf" download className="inline-flex">
+                    <Button className="gap-2">
+                      <FileDown className="h-4 w-4" />
+                      Descargar Plan de Estudios Completo
+                    </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>
@@ -151,39 +157,65 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Cálculo Diferencial</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/calculo-diferencial.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Fundamentos de Programación</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/fundamentos-programacion.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Ética</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/taller-etica.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Matemáticas Discretas</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/matematicas-discretas.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Fundamentos de Investigación</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/fundamentos-investigacion.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Administración</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/taller-administracion.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -194,39 +226,61 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Cálculo Integral</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/calculo-integral.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Programación Orientada a Objetos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/poo.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Contabilidad y Costos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/contabilidad-costos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Química</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/quimica.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Álgebra Lineal</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/algebra-lineal.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Probabilidad y Estadística</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/probabilidad-estadistica.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -237,39 +291,61 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Cálculo Vectorial</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/calculo-vectorial.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Estructura de Datos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/estructura-datos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Cultura Empresarial</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/cultura-empresarial.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Investigación de Operaciones</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/investigacion-operaciones.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Física General</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/fisica-general.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Sistemas Operativos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/sistemas-operativos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -280,39 +356,61 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Ecuaciones Diferenciales</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/ecuaciones-diferenciales.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Métodos Numéricos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/metodos-numericos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Tópicos Avanzados de Programación</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/topicos-programacion.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Fundamentos de Bases de Datos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/fundamentos-bd.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Simulación</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/simulacion.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Principios Eléctricos y Aplicaciones Digitales</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/principios-electricos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -323,39 +421,65 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Fundamentos de Telecomunicaciones</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/fundamentos-telecomunicaciones.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Sistemas de Información</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/sistemas-informacion.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Bases de Datos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/taller-bd.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Graficación</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/graficacion.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Arquitectura de Computadoras</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/arquitectura-computadoras.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Ingeniería de Software</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/ingenieria-software.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -366,39 +490,61 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Redes de Computadoras</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/redes-computadoras.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Administración de Bases de Datos</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/administracion-bd.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Programación Web</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/programacion-web.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Sistemas Programables</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/sistemas-programables.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Lenguajes y Autómatas I</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/lenguajes-automatas-1.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Ingeniería de Software</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a
+                          href="/files/temarios/taller-ingenieria-software.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -409,33 +555,48 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Redes Emergentes</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/redes-emergentes.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Investigación I</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/taller-investigacion-1.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Desarrollo de Aplicaciones para Dispositivos Móviles</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/desarrollo-movil.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Lenguajes y Autómatas II</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/lenguajes-automatas-2.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Gestión de Proyectos de Software</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/gestion-proyectos.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
@@ -446,27 +607,39 @@ export default function PlanesTemarios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Administración y Seguridad de Redes</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/seguridad-redes.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Taller de Investigación II</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/taller-investigacion-2.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Auditoría en Tecnologías de la Información</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/auditoria-ti.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h3 className="font-semibold">Inteligencia Artificial</h3>
-                        <Button variant="link" className="p-0 h-auto text-sm">
-                          Ver temario completo
-                        </Button>
+                        <a href="/files/temarios/inteligencia-artificial.pdf" target="_blank" rel="noopener noreferrer">
+                          <Button variant="link" className="p-0 h-auto text-sm gap-2">
+                            <FileText className="h-4 w-4" />
+                            Ver temario completo
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </AccordionContent>
