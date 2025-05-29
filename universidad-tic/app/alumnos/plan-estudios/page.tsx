@@ -4,41 +4,32 @@ import { ArrowLeft, BookA } from "lucide-react"
 export default function PlanEstudios() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <header className="bg-[#003366] text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h1>
-            <nav className="hidden md:flex space-x-6">
-              <Link href="#" className="hover:underline">
-                Aspirantes
-              </Link>
-              <Link href="#" className="hover:underline">
-                Docentes
-              </Link>
-              <Link href="#" className="hover:underline font-bold border-b-2 border-white pb-1">
-                Alumnos
-              </Link>
-              <Link href="#" className="hover:underline">
-                Egresados
-              </Link>
-              <Link href="#" className="hover:underline">
-                Público
-              </Link>
-            </nav>
-            <button className="md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
+      <header className="bg-gradient-to-r from-[#002244] to-[#004488] text-white py-4 shadow-md">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      
+      <div className="flex items-center space-x-4">
+        <img src="/logo.png" alt="Logo ITSOEH" className="h-20 hidden md:block" />
+        <h1 className="text-xl md:text-2xl font-serif font-bold leading-snug tracking-wide max-w-md">
+  Instituto Tecnológico Superior del <br className="hidden md:block" />
+  Occidente del Estado de Hidalgo
+</h1>
+      </div>
+      <nav className="hidden md:flex space-x-6 text-sm font-medium">
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Aspirantes</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Docentes</Link>
+         <Link href="/" className="hover:text-yellow-300 font-bold border-b-2 border-yellow-300 pb-1">Alumnos</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Egresados</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Público</Link>
+      </nav>
+      <button className="md:hidden p-2 rounded hover:bg-white/10 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
       <div className="bg-[#004d99] text-white py-3">
         <div className="container mx-auto px-4">
@@ -88,53 +79,54 @@ export default function PlanEstudios() {
               <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Primer semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
+                  <li className="bg-gray-50 p-3 rounded">Cálculo Diferencial</li>
                   <li className="bg-gray-50 p-3 rounded">Fundamentos de Programación</li>
-                  <li className="bg-gray-50 p-3 rounded">Matemáticas Discretas</li>
-                  <li className="bg-gray-50 p-3 rounded">Arquitectura de Computadoras</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés I</li>
-                  <li className="bg-gray-50 p-3 rounded">Expresión Oral y Escrita</li>
-                  <li className="bg-gray-50 p-3 rounded">Formación Sociocultural I</li>
+                  <li className="bg-gray-50 p-3 rounded">Matemáticas Discretas I</li>
+                  <li className="bg-gray-50 p-3 rounded">Introducción a las TIC's</li>                  
+                  <li className="bg-gray-50 p-3 rounded">Taller de Ética</li>
+                  <li className="bg-gray-50 p-3 rounded">Fundamentos de Investigación</li>
                 </ul>
               </div>
 
               <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Segundo semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
+                  <li className="bg-gray-50 p-3 rounded">Cálculo Integral</li>
                   <li className="bg-gray-50 p-3 rounded">Programación Orientada a Objetos</li>
-                  <li className="bg-gray-50 p-3 rounded">Cálculo Diferencial e Integral</li>
-                  <li className="bg-gray-50 p-3 rounded">Sistemas Operativos</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés II</li>
-                  <li className="bg-gray-50 p-3 rounded">Bases de Datos</li>
-                  <li className="bg-gray-50 p-3 rounded">Formación Sociocultural II</li>
+                  <li className="bg-gray-50 p-3 rounded">Matemáticas Discretas II</li>
+                  <li className="bg-gray-50 p-3 rounded">Probabilidad y Estadística</li>
+                  <li className="bg-gray-50 p-3 rounded">Contabilidad y Costos</li>
+                  <li className="bg-gray-50 p-3 rounded">Electricidad y Magnetismo</li>
                 </ul>
               </div>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-[#003366] mb-4 pb-2 border-b border-gray-200">Segundo Año</h3>
-              <div>
+              <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Tercer semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Estructura de Datos</li>
-                  <li className="bg-gray-50 p-3 rounded">Probabilidad y Estadística</li>
-                  <li className="bg-gray-50 p-3 rounded">Redes de Computadoras</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés III</li>
-                  <li className="bg-gray-50 p-3 rounded">Bases de Datos Avanzadas</li>
-                  <li className="bg-gray-50 p-3 rounded">Integradora I</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="font-bold text-lg text-[#004d99] mb-3">Cuarto semestre</h4>
-                <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Desarrollo Web</li>
-                  <li className="bg-gray-50 p-3 rounded">Investigación de Operaciones</li>
-                  <li className="bg-gray-50 p-3 rounded">Administración de Redes</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés IV</li>
-                  <li className="bg-gray-50 p-3 rounded">Ingeniería de Software</li>
-                  <li className="bg-gray-50 p-3 rounded">Formación Sociocultural III</li>
+                  <li className="bg-gray-50 p-3 rounded">Matemáticas Aplicadas a Comunicaciones</li>
+                  <li className="bg-gray-50 p-3 rounded">Estructura y Organización de Datos</li>
+                  <li className="bg-gray-50 p-3 rounded">Administración Gerencial</li>
+                  <li className="bg-gray-50 p-3 rounded">Álgebra Lineal</li>
+                  <li className="bg-gray-50 p-3 rounded">Fundamentos de Bases de Datos</li>
+                  <li className="bg-gray-50 p-3 rounded">Circuitos Eléctricos y Electrónicos</li>
                 </ul>
               </div>
 
+              <div className="mb-6">
+                <h4 className="font-bold text-lg text-[#004d99] mb-3">Cuarto semestre</h4>
+                <ul className="grid md:grid-cols-2 gap-2">
+                  <li className="bg-gray-50 p-3 rounded">Análisis de Señales y Sistemas de Comunicación</li>
+                  <li className="bg-gray-50 p-3 rounded">Programación II</li>
+                  <li className="bg-gray-50 p-3 rounded">Matemáticas para la Toma de Decisiones</li>
+                  <li className="bg-gray-50 p-3 rounded">Fundamentos de Redes</li>
+                  <li className="bg-gray-50 p-3 rounded">Taller de Base de Datos</li>
+                  <li className="bg-gray-50 p-3 rounded">Arquitectura de Computadoras</li>
+                  <li className="bg-gray-50 p-3 rounded">Ingeniería de Software</li>
+                </ul>
+              </div>
             </div>
 
             <div>
@@ -142,24 +134,26 @@ export default function PlanEstudios() {
               <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Quinto semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Desarrollo de Aplicaciones Móviles</li>
-                  <li className="bg-gray-50 p-3 rounded">Seguridad Informática</li>
-                  <li className="bg-gray-50 p-3 rounded">Servicios de Red</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés V</li>
-                  <li className="bg-gray-50 p-3 rounded">Gestión de Proyectos de Software</li>
-                  <li className="bg-gray-50 p-3 rounded">Formación Sociocultural IV</li>
+                  <li className="bg-gray-50 p-3 rounded">Redes de Computadora</li>
+                  <li className="bg-gray-50 p-3 rounded">Telecomunicaciones</li>
+                  <li className="bg-gray-50 p-3 rounded">Desarrollo Sustentable</li>
+                  <li className="bg-gray-50 p-3 rounded">Base de Datos Distribuidas</li>
+                  <li className="bg-gray-50 p-3 rounded">Sistemas Operativos I</li>
+                  <li className="bg-gray-50 p-3 rounded">Taller de Ingeniería de Software</li>
+                  <li className="bg-gray-50 p-3 rounded">Administración de Proyectos</li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Sexto semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Desarrollo de Aplicaciones Empresariales</li>
-                  <li className="bg-gray-50 p-3 rounded">Auditoría Informática</li>
-                  <li className="bg-gray-50 p-3 rounded">Administración de Servidores</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés VI</li>
-                  <li className="bg-gray-50 p-3 rounded">Calidad de Software</li>
-                  <li className="bg-gray-50 p-3 rounded">Integradora II</li>
+                  <li className="bg-gray-50 p-3 rounded">Redes Emergentes</li>
+                  <li className="bg-gray-50 p-3 rounded">Programación WEB</li>
+                  <li className="bg-gray-50 p-3 rounded">Desarrollo de Emprendedores</li>
+                  <li className="bg-gray-50 p-3 rounded">Taller de Investigación I</li>
+                  <li className="bg-gray-50 p-3 rounded">Sistemas Operativos II</li>
+                  <li className="bg-gray-50 p-3 rounded">Tecnologías Inalámbricas</li>
+                  <li className="bg-gray-50 p-3 rounded">Interacción Humano Computadora</li>
                 </ul>
               </div>
             </div>
@@ -169,24 +163,25 @@ export default function PlanEstudios() {
               <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Séptimo semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Computación en la Nube</li>
-                  <li className="bg-gray-50 p-3 rounded">Inteligencia Artificial</li>
-                  <li className="bg-gray-50 p-3 rounded">Virtualización</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés VII</li>
-                  <li className="bg-gray-50 p-3 rounded">Emprendimiento Tecnológico</li>
-                  <li className="bg-gray-50 p-3 rounded">Formación Sociocultural V</li>
+                  <li className="bg-gray-50 p-3 rounded">Desarrollo de Aplicaciones para Dispositivos Móviles</li>
+                  <li className="bg-gray-50 p-3 rounded">Normativa en Seguridad de  la Información</li>
+                  <li className="bg-gray-50 p-3 rounded">Administración y Seguridad de Redes</li>
+                  <li className="bg-gray-50 p-3 rounded">Taller de Investigación II</li>
+                  <li className="bg-gray-50 p-3 rounded">Negocios Electrónicos I</li>
+                  <li className="bg-gray-50 p-3 rounded">Servicio Social</li>
                 </ul>
               </div>
 
               <div className="mb-6">
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Octavo semestre</h4>
                 <ul className="grid md:grid-cols-2 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Big Data y Analítica</li>
-                  <li className="bg-gray-50 p-3 rounded">Internet de las Cosas</li>
-                  <li className="bg-gray-50 p-3 rounded">DevOps</li>
-                  <li className="bg-gray-50 p-3 rounded">Inglés VIII</li>
-                  <li className="bg-gray-50 p-3 rounded">Ética Profesional</li>
-                  <li className="bg-gray-50 p-3 rounded">Integradora III</li>
+                  <li className="bg-gray-50 p-3 rounded">Auditoría en Tecnologías de Información</li>
+                  <li className="bg-gray-50 p-3 rounded">Ingeniería del Conocimiento</li>
+                  <li className="bg-gray-50 p-3 rounded">Ciberseguridad y Protección de Datos</li>
+                  <li className="bg-gray-50 p-3 rounded">Seguridad en Bases de Datos</li>
+                  <li className="bg-gray-50 p-3 rounded">Negocios Electrónicos II</li>
+                  <li className="bg-gray-50 p-3 rounded">Seguridad de Cómputo en la Nube</li>
+                  <li className="bg-gray-50 p-3 rounded">Seguridad en la Ingeniería de Datos</li>
                 </ul>
               </div>
             </div>
@@ -197,21 +192,12 @@ export default function PlanEstudios() {
               <div>
                 <h4 className="font-bold text-lg text-[#004d99] mb-3">Noveno semestre</h4>
                 <ul className="grid md:grid-cols-1 gap-2">
-                  <li className="bg-gray-50 p-3 rounded">Estadía Profesional (525 horas)</li>
+                  <li className="bg-gray-50 p-3 rounded">Residencia Profesional</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
-            <h3 className="text-lg font-bold text-[#003366] mb-2">Información Adicional</h3>
-            <ul className="list-disc pl-6 space-y-1 text-gray-700">
-              <li>Total de créditos: 260</li>
-              <li>Horas teóricas: 1,500</li>
-              <li>Horas prácticas: 1,800</li>
-              <li>Estadía profesional: 525 horas</li>
-            </ul>
-          </div>
         </div>
       </div>
 
@@ -220,9 +206,7 @@ export default function PlanEstudios() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold mb-4">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h3>
-              <p className="text-sm">
-                Formando profesionales en tecnologías de la información y comunicaciones desde 1995.
-              </p>
+               
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>

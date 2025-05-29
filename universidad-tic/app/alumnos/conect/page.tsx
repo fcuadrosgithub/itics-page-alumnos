@@ -4,41 +4,32 @@ import { ArrowLeft, LogIn, BookOpen, Calendar, Users, FileText, HelpCircle, Book
 export default function Conect() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <header className="bg-[#003366] text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h1>
-            <nav className="hidden md:flex space-x-6">
-              <Link href="#" className="hover:underline">
-                Aspirantes
-              </Link>
-              <Link href="#" className="hover:underline">
-                Docentes
-              </Link>
-              <Link href="#" className="hover:underline font-bold border-b-2 border-white pb-1">
-                Alumnos
-              </Link>
-              <Link href="#" className="hover:underline">
-                Egresados
-              </Link>
-              <Link href="#" className="hover:underline">
-                Público
-              </Link>
-            </nav>
-            <button className="md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
+      <header className="bg-gradient-to-r from-[#002244] to-[#004488] text-white py-4 shadow-md">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      
+      <div className="flex items-center space-x-4">
+        <img src="/logo.png" alt="Logo ITSOEH" className="h-20 hidden md:block" />
+        <h1 className="text-xl md:text-2xl font-serif font-bold leading-snug tracking-wide max-w-md">
+  Instituto Tecnológico Superior del <br className="hidden md:block" />
+  Occidente del Estado de Hidalgo
+</h1>
+      </div>
+      <nav className="hidden md:flex space-x-6 text-sm font-medium">
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Aspirantes</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Docentes</Link>
+         <Link href="/" className="hover:text-yellow-300 font-bold border-b-2 border-yellow-300 pb-1">Alumnos</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Egresados</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Público</Link>
+      </nav>
+      <button className="md:hidden p-2 rounded hover:bg-white/10 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
       <div className="bg-[#004d99] text-white py-3">
         <div className="container mx-auto px-4">
@@ -71,21 +62,10 @@ export default function Conect() {
                   Ingresa a la plataforma con tu matrícula y contraseña para acceder a tu información educativa.
                 </p>
                 <a href="http://conect.itsoeh.edu.mx/mix_21_alu/" target="_blank" className="inline-flex">
-                  <button className="bg-white text-[#003366] py-2 px-6 rounded-md hover:bg-gray-100 transition-colors">
+                  <button className="bg-white text-[#003366] py-2 px-6 rounded-md hover:bg-gray-100 transition-colors  flex items-center">
                     <LogIn className="h-5 w-5 mr-2" /> Iniciar sesión
                   </button>
                 </a>
-              </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">¿Olvidaste tu contraseña?</h4>
-                <p className="text-sm opacity-90 mb-2">
-                  Si no recuerdas tu contraseña, puedes restablecerla siguiendo estos pasos:
-                </p>
-                <ol className="list-decimal text-sm opacity-90 pl-5 space-y-1">
-                  <li>Haz clic en "Olvidé mi contraseña" en la página de inicio de sesión</li>
-                  <li>Ingresa tu matrícula y correo electrónico institucional</li>
-                  <li>Sigue las instrucciones enviadas a tu correo</li>
-                </ol>
               </div>
             </div>
           </div>
@@ -154,12 +134,6 @@ export default function Conect() {
                   <strong>Dispositivos:</strong> Compatible con computadoras, tablets y smartphones
                 </span>
               </li>
-              <li className="flex items-start">
-                <span className="text-[#003366] font-bold mr-2">•</span>
-                <span>
-                  <strong>Plugins:</strong> Adobe Reader para archivos PDF y reproductor multimedia actualizado
-                </span>
-              </li>
             </ul>
           </div>
         </div>
@@ -170,9 +144,7 @@ export default function Conect() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold mb-4">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h3>
-              <p className="text-sm">
-                Formando profesionales en tecnologías de la información y comunicaciones desde 1995.
-              </p>
+               
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>

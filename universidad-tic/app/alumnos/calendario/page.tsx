@@ -4,41 +4,32 @@ import { ArrowLeft, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 export default function CalendarioEscolar() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <header className="bg-[#003366] text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h1>
-            <nav className="hidden md:flex space-x-6">
-              <Link href="#" className="hover:underline">
-                Aspirantes
-              </Link>
-              <Link href="#" className="hover:underline">
-                Docentes
-              </Link>
-              <Link href="#" className="hover:underline font-bold border-b-2 border-white pb-1">
-                Alumnos
-              </Link>
-              <Link href="#" className="hover:underline">
-                Egresados
-              </Link>
-              <Link href="#" className="hover:underline">
-                Público
-              </Link>
-            </nav>
-            <button className="md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
+      <header className="bg-gradient-to-r from-[#002244] to-[#004488] text-white py-4 shadow-md">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      
+      <div className="flex items-center space-x-4">
+        <img src="/logo.png" alt="Logo ITSOEH" className="h-20 hidden md:block" />
+        <h1 className="text-xl md:text-2xl font-serif font-bold leading-snug tracking-wide max-w-md">
+  Instituto Tecnológico Superior del <br className="hidden md:block" />
+  Occidente del Estado de Hidalgo
+</h1>
+      </div>
+      <nav className="hidden md:flex space-x-6 text-sm font-medium">
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Aspirantes</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Docentes</Link>
+         <Link href="/" className="hover:text-yellow-300 font-bold border-b-2 border-yellow-300 pb-1">Alumnos</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Egresados</Link>
+         <Link href="/" className="hover:text-yellow-300 transition-colors">Público</Link>
+      </nav>
+      <button className="md:hidden p-2 rounded hover:bg-white/10 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
       <div className="bg-[#004d99] text-white py-3">
         <div className="container mx-auto px-4">
@@ -104,7 +95,7 @@ export default function CalendarioEscolar() {
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Agosto</span>
-                      <span className="block font-bold">12</span>
+                      <span className="block font-bold">19</span>
                     </div>
                     <div>
                       <span className="font-medium text-[#003366]">Inicio de clases</span>
@@ -124,53 +115,33 @@ export default function CalendarioEscolar() {
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Octubre</span>
-                      <span className="block font-bold">7-11</span>
+                      <span className="block font-bold">23-25</span>
                     </div>
                     <div>
-                      <span className="font-medium text-[#003366]">Primer periodo de evaluaciones</span>
-                      <p className="text-sm text-gray-600">Evaluaciones parciales de medio semestre</p>
-                    </div>
-                  </li>
-                  <li className="flex">
-                    <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
-                      <span className="block text-xs">Noviembre</span>
-                      <span className="block font-bold">18-22</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-[#003366]">Semana de la Ingeniería</span>
+                      <span className="font-medium text-[#003366]">CONAINTE</span>
                       <p className="text-sm text-gray-600">Conferencias, talleres y actividades especiales</p>
                     </div>
-                  </li>
+                  </li>              
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Diciembre</span>
-                      <span className="block font-bold">2-13</span>
+                      <span className="block font-bold">6</span>
                     </div>
                     <div>
-                      <span className="font-medium text-[#003366]">Evaluaciones finales</span>
-                      <p className="text-sm text-gray-600">Periodo de exámenes finales del primer semestre</p>
+                      <span className="font-medium text-[#003366]">Fin del clases</span>
+                      <p className="text-sm text-gray-600">Último día de clases a estudiantes</p>
                     </div>
                   </li>
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Diciembre</span>
-                      <span className="block font-bold">16</span>
+                      <span className="block font-bold">20</span>
                     </div>
                     <div>
                       <span className="font-medium text-[#003366]">Fin del semestre</span>
                       <p className="text-sm text-gray-600">Último día de actividades académicas</p>
                     </div>
-                  </li>
-                  <li className="flex">
-                    <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
-                      <span className="block text-xs">Diciembre</span>
-                      <span className="block font-bold">19</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-[#003366]">Publicación de calificaciones</span>
-                      <p className="text-sm text-gray-600">Disponibles en el sistema escolar</p>
-                    </div>
-                  </li>
+                  </li>                  
                 </ul>
               </div>
 
@@ -182,11 +153,11 @@ export default function CalendarioEscolar() {
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Enero</span>
-                      <span className="block font-bold">13</span>
+                      <span className="block font-bold">20</span>
                     </div>
                     <div>
                       <span className="font-medium text-[#003366]">Inicio de clases</span>
-                      <p className="text-sm text-gray-600">Primer día del segundo semestre</p>
+                      <p className="text-sm text-gray-600">Primer día de clases</p>
                     </div>
                   </li>
                   <li className="flex">
@@ -201,34 +172,14 @@ export default function CalendarioEscolar() {
                   </li>
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
-                      <span className="block text-xs">Marzo</span>
-                      <span className="block font-bold">10-14</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-[#003366]">Primer periodo de evaluaciones</span>
-                      <p className="text-sm text-gray-600">Evaluaciones parciales de medio semestre</p>
-                    </div>
-                  </li>
-                  <li className="flex">
-                    <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Abril</span>
-                      <span className="block font-bold">7-18</span>
+                      <span className="block font-bold">14-25</span>
                     </div>
                     <div>
-                      <span className="font-medium text-[#003366]">Vacaciones de primavera</span>
+                      <span className="font-medium text-[#003366]">Vacaciones de semana santa</span>
                       <p className="text-sm text-gray-600">Periodo de descanso para estudiantes y docentes</p>
                     </div>
-                  </li>
-                  <li className="flex">
-                    <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
-                      <span className="block text-xs">Mayo</span>
-                      <span className="block font-bold">12-23</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-[#003366]">Evaluaciones finales</span>
-                      <p className="text-sm text-gray-600">Periodo de exámenes finales del segundo semestre</p>
-                    </div>
-                  </li>
+                  </li>                  
                   <li className="flex">
                     <div className="bg-[#003366] text-white text-center py-1 px-3 rounded-md w-32 mr-4">
                       <span className="block text-xs">Mayo</span>
@@ -257,21 +208,15 @@ export default function CalendarioEscolar() {
               <li className="flex items-start">
                 <span className="text-[#003366] font-bold mr-2">•</span>
                 <span>
-                  <strong>Reinscripción para segundo semestre:</strong> Del 1 al 10 de enero de 2025
+                  <strong>Reinscripción para semestre Enero-Mayo:</strong> Del 9 al 17 de enero de 2025
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#003366] font-bold mr-2">•</span>
                 <span>
-                  <strong>Periodo de altas y bajas de materias:</strong> Primera semana de cada semestre
+                  <strong>Periodo de altas y bajas de materias:</strong> Primeras dos semanas de cada semestre
                 </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-[#003366] font-bold mr-2">•</span>
-                <span>
-                  <strong>Pago de colegiaturas:</strong> Primeros 10 días de cada mes
-                </span>
-              </li>
+              </li>              
             </ul>
           </div>
         </div>
@@ -282,9 +227,7 @@ export default function CalendarioEscolar() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold mb-4">Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</h3>
-              <p className="text-sm">
-                Formando profesionales en tecnologías de la información y comunicaciones desde 1995.
-              </p>
+               
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
